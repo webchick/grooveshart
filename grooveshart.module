@@ -1,1 +1,18 @@
 <?php
+
+/**
+ * Implements hook_theme().
+ */
+function grooveshart_theme() {
+  return array(
+    'grooveshark_player' => array(
+      'variables' => array(
+        // Comma-delimited list of Song IDS.
+        'songIDs' => NULL,
+        'width' => 250,
+        'height' => 40,
+      ),
+      'template' => 'grooveshark-player',
+    ),
+  );
+}

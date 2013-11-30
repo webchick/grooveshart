@@ -27,8 +27,11 @@ class GrooveShartController {
 
     $response = $request->send();
 
+    $json = $response->json();
+
     return array(
-      '#markup' => debug($response->json()),
+      '#theme' => 'grooveshark_player',
+      '#songIDs' => $json['SongID'],
     );
   }
 }
