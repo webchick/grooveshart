@@ -1,0 +1,4 @@
+name: GrooveShart
+description: Streams the very worst songs, using the GrooveShark API.
+core: 8.x
+type: module
