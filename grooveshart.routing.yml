@@ -1,0 +1,7 @@
+grooveshart.stream:
+  path: '/stream'
+  defaults:
+    _content: '\Drupal\grooveshart\Controller\GrooveShartController::stream'
+    _title: 'Stream terrible music'
+  requirements:
+    _permission: 'access content'
