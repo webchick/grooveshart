@@ -5,3 +5,10 @@ grooveshart.stream:
     _title: 'Stream terrible music'
   requirements:
     _permission: 'access content'
+grooveshart.settings:
+  path: '/admin/config/grooveshart'
+  defaults:
+    _title: 'GrooveShart'
+    _form: '\Drupal\grooveshart\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'

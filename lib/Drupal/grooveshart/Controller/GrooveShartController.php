@@ -17,18 +17,20 @@ class GrooveShartController {
    */
   public function stream() {
     $client = \Drupal::httpClient();
+    $config = \Drupal::config('grooveshart.settings');
 
-    // @todo Grab a random value from config file.
-    $terrible_song = urlencode('Pauly Shore Lisa Lisa');
+    // Grab a random terrible song.
+    $songs = $config->get('songs');
+    $random = array_rand($songs, 1);
+    $terrible_song = urlencode($songs[$random]);
 
-    // @todo Get API key from config.
-    $api_key = '';
+    // Submit search request to GrooveShark API.
+    $api_key = $config->get('api_key');
     $request = $client->get("http://tinysong.com/b/$terrible_song/?format=json&key=$api_key");
-
     $response = $request->send();
-
     $json = $response->json();
 
+    // Output the player.
     return array(
       '#theme' => 'grooveshark_player',
       '#songIDs' => $json['SongID'],
