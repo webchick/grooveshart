@@ -1,12 +1,12 @@
-grooveshart.stream:
-  path: '/stream'
+grooveshart.shart:
+  path: '/shart'
   defaults:
-    _content: '\Drupal\grooveshart\Controller\GrooveShartController::stream'
+    _content: '\Drupal\grooveshart\Controller\GrooveShartController::shart'
     _title: 'Stream terrible music'
   requirements:
     _permission: 'access content'
 grooveshart.settings:
-  path: '/admin/config/grooveshart'
+  path: '/admin/config/services/grooveshart'
   defaults:
     _title: 'GrooveShart'
     _form: '\Drupal\grooveshart\Form\SettingsForm'

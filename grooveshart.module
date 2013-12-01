@@ -1,6 +1,28 @@
 <?php
 
 /**
+ * @file
+ * Streams terrible songs using the Grooveshark API.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function grooveshart_menu() {
+  $items['shart'] = array(
+    'title' => 'Terrible songs',
+    'route_name' => 'grooveshart.shart',
+  );
+  $items['admin/config/services/grooveshart'] = array(
+    'title' => 'Grooveshart',
+    'description' => 'Add your own absolutely terrible songs.',
+    'route_name' => 'grooveshart.settings', 
+  );
+
+  return $items;
+}
+
+/**
  * Implements hook_theme().
  */
 function grooveshart_theme() {

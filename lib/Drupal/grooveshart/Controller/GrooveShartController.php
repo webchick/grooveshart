@@ -15,7 +15,7 @@ class GrooveShartController {
   /**
    * Streams a truly terrible song from the GrooveShark API.
    */
-  public function stream() {
+  public function shart() {
     $client = \Drupal::httpClient();
     $config = \Drupal::config('grooveshart.settings');
 
